@@ -26,20 +26,20 @@ import coil.compose.rememberAsyncImagePainter
 
 @Composable
 fun RecipeScreen(modifier: Modifier = Modifier,
+                 viewstate: MainViewModel.RecipeState,
                  navigateToDetail: (Category) ->Unit){
     val recipeViewModel:MainViewModel = viewModel()
-    val viewSate by recipeViewModel.categoriesState
 
     Box(modifier = Modifier.fillMaxSize()){
         when{
-            viewSate.loading ->{
+            viewstate.loading ->{
                 CircularProgressIndicator(modifier.align(Alignment.Center))
             }
-            viewSate.error != null ->{
+            viewstate.error != null ->{
                 Text("ERROR OCCURRED")
             }
             else ->{
-                CategoryScreen(categories = viewSate.list,
+                CategoryScreen(categories = viewstate.list,
                     navigateToDetail)
             }
         }
