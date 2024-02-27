@@ -1,6 +1,7 @@
 This app implements
 
 - JSON
+- MVVM
 - Retrofit
 - HTTP Request
 - Restful API
