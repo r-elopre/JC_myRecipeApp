@@ -6,4 +6,4 @@ This app implements
 - Restful API
  - Navigation
 
-see the image
+see the image https://github.com/r-elopre/JC_myRecipeApp/blob/master/first%20page.png
